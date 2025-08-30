@@ -4,11 +4,14 @@
  */
 
 import express from 'express';
+import corser from 'corser';
+
 import * as path from 'path';
 
 import { pokemon } from './pokemon';
 
 const app = express();
+app.use(corser.create());
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 

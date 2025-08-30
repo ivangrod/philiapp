@@ -5,6 +5,7 @@
     "module": "nodenext",
     "types": ["node", "express"],
     "rootDir": "src",
+    "typeRoots": ["src/types", "../../node_modules/@types"],
     "moduleResolution": "nodenext",
     "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo"
   },
