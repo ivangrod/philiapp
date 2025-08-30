@@ -1,0 +1,26 @@
+{
+  "name": "@philiapp/philiapp-api-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@philiapp/philiapp-api"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "options": {
+          "jestConfig": "apps/philiapp-api-e2e/jest.config.ts",
+          "passWithNoTests": true
+        },
+        "dependsOn": [
+          "@philiapp/philiapp-api:build",
+          "@philiapp/philiapp-api:serve"
+        ]
+      }
+    }
+  }
+}
